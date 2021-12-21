@@ -17,6 +17,8 @@ vue3提供一套插拔式的组合api，用于逻辑组合，组件公用逻辑
 - provide
 - inject
 
+watchEffect  立即执行传递进去的callback
+
 ### 生命周期函数
 params props
 params context
