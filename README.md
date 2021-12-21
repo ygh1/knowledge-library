@@ -1,0 +1,1 @@
+self knowledge library, writed when I have thought about fe knowlefge
