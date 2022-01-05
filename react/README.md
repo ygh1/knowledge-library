@@ -15,8 +15,11 @@ componentDidMount
 
 ### 组件更新阶段
 ## 父组件更新
+
 componentWillReceiveProps
+父组件更新，无论是state还是props，都会触发子组件的 componentWillReceiveProps 执行
 shouldComponentUpdate
+返回true，重新re-render
 componentWillUpdate
 render
 componentDidUpdate
@@ -29,6 +32,9 @@ componentDidUpdate
 
 ### 组件销毁阶段
 componentWillMount
+
+### React 16.3之后的更新过程
+![avatar](./img/86A6DCEA-7F68-4751-BB75-7C1FC04B78AB.png)
 ### fiber 过程
 在mount时：通过JSX创建FiberRoot和RootFiber
 FiberRoot.current = RootFiber
