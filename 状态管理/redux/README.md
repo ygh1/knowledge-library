@@ -1,4 +1,4 @@
-Redux 起步
+# Redux 起步
 Redux 对于 JavaScript 应用是一个可预测状态的容器
 
 使你的应用更稳定可靠的运行在不同的环境（client，server，and native），且易可测试的，另外，它还提供的极好的开发体验者体验，例如：代码时间旅行断点器
