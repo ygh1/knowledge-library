@@ -1,0 +1,1 @@
+process.argv 接受node运行时传递入的参数
