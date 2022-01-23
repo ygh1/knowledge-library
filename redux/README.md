@@ -24,4 +24,11 @@ const mapStateToProps = state => {
     count: state.count
   }
 }
-connect(mapStateToProps)(Components)
+const mapDispatchToProps = dispatch => {
+  return {
+    increment() {
+      dispatch({type: 'increment'})
+    }
+  }
+}
+connect(mapStateToProps, mapDispatchToProps)(Components)
