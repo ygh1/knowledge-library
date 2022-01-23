@@ -52,3 +52,12 @@ export default bindReducer({
   modal: modalReducer
 })
 ```
+
+## Redux 中间级
+中间件允许我们扩展redux应用程序
+
+开发中间件的模板代码
+``` javascript
+import { applyMiddleware } from 'redux'
+export default store => next => action => {} 
+```
