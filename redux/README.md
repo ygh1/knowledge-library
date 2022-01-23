@@ -32,3 +32,23 @@ const mapDispatchToProps = dispatch => {
   }
 }
 connect(mapStateToProps, mapDispatchToProps)(Components)
+
+对重复性的代码进行抽象处理，将重复性的函数通过工厂函数创建出来，通过bindActionCreators简化action
+``` javascript
+const actionCreator = {
+  increment() {
+    return {type: 'increment'}
+  }
+}
+const mapActiontoProps = dispatch => bindActionCreators(actionCreator, dispatch)
+```
+
+## 合并 reducer
+``` javascript
+import bindReducer from 'redux'
+
+export default bindReducer({
+  counter: countReducer,
+  modal: modalReducer
+})
+```
