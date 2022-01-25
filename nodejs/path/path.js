@@ -14,4 +14,5 @@ const path = require('path')
 // const normalPath = path.normalize('/foo/bar//baz/asdf/quux/.')
 // console.log(normalPath)
 
-
+// 获取文件夹路径
+// path.dirname('sdfs/sfsd/aaa.js')
