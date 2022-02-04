@@ -1,26 +1,29 @@
-### web components 组件库
+# Web Component
+
+### 组件库
 css-doodle
 fancy-components
 
 ### Vue React 的支持
-Vue以及React都是支持web components，在对应的框架中使用web components时，需要作相应的编译配置，使打包器可以正确的识别自定义元素
+Vue以及React都是支持 Web Components，在对应的框架中使用Web Components时，需要作相应的编译配置，使打包器可以正确的识别自定义元素
 
-vue的语法借鉴了 web components
+vue的语法借鉴了 Web Components
 
-### web components 概念
+### 概念
 1. HTML Imports (已经废弃)
 2. HTML templates
-3. Custom tag
+3. Custom Elements
 3. Shadow DOM
 
-通过以下代码可以直接创建 web components
+### 使用
+通过以下代码可以直接创建 Web Components
 ``` html
 <body>
-  <custom-tag>我是自定义标签</custom-tag>
+  <custom-element>我是自定义标签</custom-element>
 </body>
 
 <script>
-window.customElements('custom-tag', class extends HTMLElement {
+window.customElements('custom-element', class extends HTMLElement {
   constructor () {
     super()
   }
