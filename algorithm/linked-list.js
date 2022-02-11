@@ -60,7 +60,6 @@ var MyLinkedList = function() {
   @return {void}
   */
   MyLinkedList.prototype.addAtIndex = function(index, val) {
-    debugger
     if (index <= 0) {
         this.addAtHead(val)
         return
@@ -80,7 +79,9 @@ var MyLinkedList = function() {
         current = current.next
     }
     if (index - 1 === i) {
-        this.addAtTail(val)
+        if (this.head) {
+            this.addAtTail(val)
+        }
     }
   };
   
@@ -90,7 +91,9 @@ var MyLinkedList = function() {
   */
   MyLinkedList.prototype.deleteAtIndex = function(index) {
     if (index === 0) {
-        this.head = this.head.next
+        if (this.head) {
+            this.head = this.head.next
+        }
         return
     }
     let current = this.head
@@ -98,10 +101,7 @@ var MyLinkedList = function() {
     let secendLast = null
     while (current && current.next) {
         if ((index - 1) === i++) {
-            current.next = {
-                value: current.next.next?.value,
-                next: current.next.next
-            }
+            current.next = current.next.next
             return
         }
         if (current && current.next && !current.next.next) {
@@ -109,17 +109,18 @@ var MyLinkedList = function() {
         }
         current = current.next
     }
-    if (index - 1 === i) {
+    if (index === i && secendLast) {
         secendLast.next = {
-            value: val,
             next: null
         }
     }
   };
 
+
+  
   const obj = new MyLinkedList(null)
-  obj.addAtHead(5)
-  obj.addAtIndex(1, 2)
-  obj.get(1)
-  console.log( obj.head )
+  obj.addAtIndex(1, 0)
+  obj.get(0)
+
+  console.log( JSON.stringify(obj.head) )
   
