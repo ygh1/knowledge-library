@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var fakeWindow = new Proxy(window, {
+      get(target, propKey, receiver) {
+        console.log('get')
+        return Reflect.get(target, propKey, receiver);
+      },
+      set(target, propKey, value, receiver) {
+        console.log('set')
+        return Reflect.set(target, propKey, value, receiver);
+      }
+    })
+
+    console.log(fakeWindow)
+    fakeWindow.aaa = 1
+
+    const obj = {
+      a: 1
+    }
+    var fakeObj = new Proxy(obj, {
+      get(target, propKey, receiver) {
+        console.log('get')
+        return Reflect.get(target, propKey, receiver);
+      },
+      set(target, propKey, value, receiver) {
+        console.log('set')
+        return Reflect.set(target, propKey, value, receiver);
+      }
+    })
+  </script>
+</body>
+</html>

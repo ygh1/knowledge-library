@@ -4,3 +4,10 @@
 模块联邦
 - qiankun
 - single-spa
+
+JavaScript 沙箱隔离方案
+- Proxy代理
+样式隔离方案
+- css scoped
+- shadow DOM
+应用通信方案
