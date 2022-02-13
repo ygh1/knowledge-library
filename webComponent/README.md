@@ -24,6 +24,7 @@ vue的语法借鉴了 Web Components
 
 <script>
 window.customElements('custom-element', class extends HTMLElement {
+  static observedAttribetes = ['color']
   constructor () {
     super()
   }
@@ -37,6 +38,10 @@ window.customElements('custom-element', class extends HTMLElement {
   }
   // 内部元素被 adopted之后的回调
   adoptedCallback () {
+
+  }
+  // 当属性改变时回调
+  attribeteChangedCallback (name, oldValue, newValue) {
 
   }
 })
