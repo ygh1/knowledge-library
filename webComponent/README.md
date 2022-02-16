@@ -11,9 +11,9 @@ vue的语法借鉴了 Web Components
 
 ### 概念
 1. HTML Imports (已经废弃)
-2. HTML templates
-3. Custom Elements
-3. Shadow DOM
+2. Custom Elements
+3. HTML templates
+4. Shadow DOM
 
 ### 使用
 通过以下代码可以直接创建 Web Components

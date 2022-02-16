@@ -4,6 +4,7 @@
 模块联邦
 - qiankun
 - single-spa
+- MicroApp
 
 JavaScript 沙箱隔离方案
 - Proxy代理

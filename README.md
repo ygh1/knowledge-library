@@ -1,6 +1,6 @@
 ## Self knowledge library, Writed when I have thought about fe knowledge
 
-1. js 基础
+1. JavaScript 基础
 2. 网络协议缓存
 3. 工程化
 4. Vue框架生态及源码分析
