@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <my-button color="green"></my-button>
+  <script>
+    const buttonTemplate = document.createElement('template')
+    buttonTemplate.innerHTML = `
+      <style>
+        button {
+          background: skyblue;
+          border: 0;
+        }
+      </style>
+      <button>按钮</button>
+    `
+    class MyButton extends HTMLElement {
+      static get observedAttributes() {
+        return ['color']
+      }
+      get color () {
+        return this.getAttribute('color')
+      }
+      set color (value) {
+        this.setAttribute('color', value)
+      }
+      constructor () {
+        super()
+        const shadowRoot = this.attachShadow({mode: 'open'})
+        shadowRoot.appendChild(buttonTemplate.content.cloneNode(true))
+      }
+      connectedCallback () {
+        console.log('mounted')
+        this.color = 'red'
+      }
+      disConnectedCallback () {
+        console.log('unmounted')
+      }
+      adoptedCallback() {
+        // 被移动到其他文档中
+      }
+      attributeChangedCallback (name, oldValue, newValue) {
+        if (oldValue === newValue) {
+          return
+        }
+        if (name === 'color' && newValue) {
+          this.shadowRoot.querySelector('button').style.color = newValue
+        }
+      }
+    }
+    customElements.define('my-button', MyButton)
+  </script>
+</body>
+</html>
