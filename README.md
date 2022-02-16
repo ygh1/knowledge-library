@@ -1,4 +1,4 @@
-self knowledge library, writed when I have thought about fe knowlefge
+## Self knowledge library, Writed when I have thought about fe knowledge
 
 1. js 基础
 2. 网络协议缓存
@@ -9,4 +9,4 @@ self knowledge library, writed when I have thought about fe knowlefge
 7. 多端开发
 8. 前言技术栈
 
-前端可以基于这几点进行自我检测或提升
+前端开发者可以基于这几点进行自我检测或提升
