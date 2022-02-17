@@ -1,3 +1,4 @@
+// 循环
 const reverseList = head => {
   let curr = null
   while (head) {
@@ -14,6 +15,22 @@ const reverseList = head => {
   }
   return curr
 }
+// 递归
+const reverseList = head => {
+  return recurse(head, null)
+}
+const recurse = (head, prev) => {
+  // 递归终止条件
+  if (!head) {
+    return prev
+  }
+  const next = head.next
+  head.next = prev
+
+  prev = head
+  head = next
+  return recurse(head, prev)
+}
 
 const linedList = {
   value: 1,
@@ -25,5 +42,5 @@ const linedList = {
     }
   }
 }
-const reverse = reverseList(null)
+const reverse = reverseList(linedList)
 console.log(reverse)
