@@ -1,11 +1,6 @@
 const reverseList = head => {
-  if (head === null) {
-    return head
-  }
   let curr = null
   while (head) {
-    
-
     // 保存下一个要循环的节点
     const next = head.next
     // 反转
@@ -30,5 +25,5 @@ const linedList = {
     }
   }
 }
-const reverse = reverseList(linedList)
+const reverse = reverseList(null)
 console.log(reverse)
