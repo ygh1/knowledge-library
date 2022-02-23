@@ -15,5 +15,5 @@ function permute (arr) {
   return res
 }
 
-const result = permute([1, 2, 3])
+const result = permute([1, 2, 3, 4])
 console.log(result)
