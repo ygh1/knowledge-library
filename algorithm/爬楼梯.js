@@ -16,5 +16,5 @@ var climbStairs = function(n) {
 //   return climbStairs(n - 2) + climbStairs(n - 1)
 // }
 
-const res = climbStairs(45)
+const res = climbStairs(7)
 console.log(res)
